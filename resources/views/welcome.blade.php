@@ -21,8 +21,8 @@
     @endif
 
     <div style="display:flex; gap:35px; margin:0 auto; justify-content:center">
-      <a href="/pizzas/create">Order a pizza!</a>
-      <a href="/pizzas">View your orders</a>
+      <a href="{{ route('pizzas.create') }}">Order a pizza!</a>
+      <a href="{{ route('pizzas.index') }}">View your orders</a>
       {{ session('msg')}}
     </div>
 
