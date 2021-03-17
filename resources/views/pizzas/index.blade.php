@@ -1,8 +1,11 @@
-@extends('layouts.layout')
+@extends('layouts.app')
 
 @section('content')
 <div class="mt-8 text-center bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg" style="width:85%;">
   <div class="the_pizza">
+    <a href="/">
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" /></svg>
+    </a>
     <h1>Pizza List</h1>
   </div>
   <div class="grid grid-cols-1 md:grid-cols-2">
