@@ -4,6 +4,8 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
+const { data } = require('jquery');
+
 require('./bootstrap');
 
 window.Vue = require('vue').default;
@@ -29,4 +31,20 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 
 const app = new Vue({
     el: '#app',
+    data: {
+      name: '-',
+      type: '-',
+      base: '-',
+      toppings: [false,false,false,false],
+      price: 0
+    },
+    computed: {
+      calcPrice() {
+        switch(this.type) {
+          case 'Margarita':
+            this.price = 7
+            break
+        }
+      }
+    }
 });

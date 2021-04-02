@@ -428,6 +428,10 @@ a:hover {
 .info {
   border-right: 2px dashed mistyrose;
   padding: 0 20px 0 0;
+  width: 380px;
+}
+.info h4 {
+  padding: 10px 0;
 }
 
 .details {
