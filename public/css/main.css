@@ -372,6 +372,10 @@ body {
   font-family: "Nunito", sans-serif;
 }
 
+html, body, #app {
+  height: 100vh;
+}
+
 footer {
   background: #eee;
   color: #999;
@@ -432,6 +436,9 @@ a:hover {
 }
 .info h4 {
   padding: 10px 0;
+}
+.info p {
+  line-height: 2.5rem;
 }
 
 .details {

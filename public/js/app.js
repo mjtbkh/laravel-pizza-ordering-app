@@ -1914,11 +1914,48 @@ var app = new Vue({
   },
   computed: {
     calcPrice: function calcPrice() {
-      switch (data.type) {
+      var _this = this;
+
+      switch (this.type) {
         case 'Margarita':
-          data.price = 7;
+          this.price = 5;
+          break;
+
+        case 'Hawaiian':
+          this.price = 7;
+          break;
+
+        case 'Veg supreme':
+          this.price = 6;
+          break;
+
+        case 'Volcano':
+          this.price = 9;
+          break;
+
+        default:
           break;
       }
+
+      if (this.type !== '-') {
+        switch (this.base) {
+          case 'cheesy crust':
+            this.price += 2;
+            break;
+
+          case 'garlic crust':
+            this.price += 1;
+            break;
+
+          default:
+            break;
+        }
+      }
+
+      this.toppings.forEach(function (t) {
+        t == true ? _this.price += 1 : null;
+      });
+      return this.price;
     }
   }
 });
