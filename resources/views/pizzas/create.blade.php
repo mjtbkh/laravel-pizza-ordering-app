@@ -14,7 +14,7 @@
         <h2>New order</h2>
         <span style="margin:0 2px;background:palegreen;color:#2d3748;border-radius: 4px;border: 1px solid palegreen;padding: 4px;font-size: 12px;box-shadow: 0px 3px 15px 0px palegreen;">order by @{{ name }}</span>
         <h4>order details:</h4>
-        <p class="text-grey-700 lead">a <b class="bg-info p-1 rounded-sm text-capitalize text-gray-200">@{{ base }}</b> based <b class="bg-info p-1 rounded-sm text-capitalize text-gray-200">@{{ type }}</b> with <br/><b class="bg-info p-1 rounded-sm text-capitalize text-gray-200">@{{ toppings[0] ? 'Mushrooms,' : null }} @{{ toppings[1] ? 'Peppers' : null }} @{{ toppings[2] ? 'Garlic' : null }} @{{ toppings[3] ? ' Olives' : null }}</b> toppings.<br />price: $@{{ calcPrice }}</p>
+        <p class="text-grey-700 lead">a <b class="bg-info p-1 rounded-sm text-capitalize text-gray-200">@{{ base }}</b> based <b class="bg-info p-1 rounded-sm text-capitalize text-gray-200">@{{ type }}</b> with <br/><b class="bg-info p-1 rounded-sm text-capitalize text-gray-200">@{{ toppings[0] ? 'Mushrooms' : null }} @{{ toppings[1] ? ' Peppers' : null }} @{{ toppings[2] ? ' Garlic' : null }} @{{ toppings[3] ? ' Olives' : null }} @{{ toppings[0]||toppings[1]||toppings[2]||toppings[3] ? null : '-'}}</b> toppings.<br />price: $@{{ calcPrice }}</p>
       </div>
       <div class="details">
         <form style="display:flex;flex-flow:column wrap;gap: 20px;align-items: flex-start;" method="post" action="/pizzas">
